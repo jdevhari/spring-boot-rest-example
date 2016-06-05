@@ -6,5 +6,4 @@ deployment:
   dockerhub:
     branch: master
     commands:
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push champ45/spring-boot-rest-example:latest
+      - $DOCKER_HUB_TRIGGER
