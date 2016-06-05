@@ -4,6 +4,11 @@ machine:
   services:
     - docker
 
+dependencies:
+  override:
+    - docker info
+    - docker build -t jdevhari/spring .
+
 deployment:
   hub:
     branch: master
