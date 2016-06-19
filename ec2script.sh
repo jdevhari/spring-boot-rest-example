@@ -15,8 +15,6 @@ git clone https://github.com/jdevhari/docker-deployer
 cd docker-deployer
 npm install
 forever start -o out.log listener.js
-docker pull jdevhari/spring
-docker run --name spring -d -p 8090:8090 jdevhari/spring
-
-#Webhook - http://54.201.104.199:9080/deploy/8090/8090
+docker pull <GitHubUserId>/<DockerHubRepoName>
+docker run --name spring -d -p 8090:8090 <GitHubUserId>/<DockerHubRepoName>
 
