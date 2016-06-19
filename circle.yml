@@ -6,7 +6,7 @@ machine:
 
 test:
   override:
-    - mvn clean package
+    - mvn  package install
     - docker info
     - docker build -t jdevhari/spring .
     
