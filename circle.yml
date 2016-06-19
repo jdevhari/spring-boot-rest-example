@@ -4,13 +4,12 @@ machine:
   services:
     - docker
 
-dependencies:
-  override:
-    - docker info
-    - docker build -t jdevhari/spring .
 test:
   override:
     - mvn clean package
+    - docker info
+    - docker build -t jdevhari/spring .
+    
 deployment:
   hub:
     branch: master
