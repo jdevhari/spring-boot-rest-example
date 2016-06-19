@@ -8,7 +8,9 @@ dependencies:
   override:
     - docker info
     - docker build -t jdevhari/spring .
-
+test:
+  override:
+    - mvn clean package
 deployment:
   hub:
     branch: master
